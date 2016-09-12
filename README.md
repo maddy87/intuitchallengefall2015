@@ -27,6 +27,17 @@ The applciation is running on Angular JS and AWS Lamda for asses calculationn
 The application works with a voice reponse on the online alexa version Echoism.io[echoism.io]
 Just  "Alexa, start skill Ikran"
 
+### Talk Docker to me
+
+You can follow installation steps or you simple download the below image from my docker repo and start using it
+```
+docker pull rajeshetty/intuitchallenge
+docker run -it -p 8000:8000 --name test rajeshetty/intuitchallenge
+cd intuitchallengefall2015
+gulp serve
+```
+Hit the [url](http://localhost:8000/#/login). And your app is ready.
+
 ### Automation tools
 
 - [Gulp](http://gulpjs.com/)
