@@ -6,7 +6,7 @@ The API's used are
     * [ZingCharts](http://zingchart.github.io/ZingChart-AngularJS/)
     * [Qundi API](https://www.quandl.com/tools/api)
 
-## [Demo](http://rajeshetty.com/index.html)
+## [Demo](http://rajeshetty.com/intuitchallenge/index.html)
 
 The applciation is running on Angular JS and AWS Lamda for asses calculationn
 
