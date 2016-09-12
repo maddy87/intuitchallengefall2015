@@ -1,0 +1,57 @@
+<div>
+	<div ng-include="'menu.html'"></div>
+	<snap-dragger></snap-dragger>
+	<snap-content snap-opt-tap-to-close="false" class="bg-dark">
+		<a href="" snap-toggle="left" ng-click="menuOpen = !menuOpen">
+			<span class="menutoggle">
+				<i ng-hide="menuOpen" class="fa fa-bars fa-2x" ></i>
+				<i ng-show="menuOpen" class="fa fa-times fa-2x" ></i>
+			</span>
+		</a>
+		<div class="fr">
+		<h2>Dashboard
+		</div>
+		<span class="glyphicon glyphicon-dashboard bg-fade"></span>
+
+            <div class="container">
+                <h1>Portfolios</h1>
+                Ikran recommends the below portfolios based on your age and income <br/><br/>
+            <div class="row">
+                <div class="row-fluid">
+                    <a ng-click="updateGraph('conservative')" class="btn btn-primary btn-lg btn-white">Conservative</a>
+                    <a ng-click="updateGraph('moderatelyC')"  class="btn btn-primary btn-lg btn-white">Moderately Conservative</a>
+                    <a ng-click="updateGraph('aggressive')"  class="btn btn-primary btn-lg btn-white">Moderately Aggressive</a>
+                    <a ng-click="updateGraph('moderatelyA')"  class="btn btn-primary btn-lg btn-white">Aggressive</a>
+                </div>
+                <br/><br/>
+            </div>
+            <div class="row">
+                <h4>{{description}}</h4><br/><br/>
+            </div>
+                <div class="row">
+                    <h4>{{prediction}}</h4><br/><br/>
+                </div>
+            <div class="row">
+                <!--- Any Chart API Goes here --><br>
+                <zingchart id="myChart" zc-json="myJson" zc-width="640px" zc-height="480px"></zingchart>
+            </div>
+            <div class="row">
+                <a ng-click="updateDesc('largestocks')" class="btn btn-primary btn-lg btn-white">Large Stocks : {{plansInfo.largestocks}}%</a>
+                <a ng-click="updateDesc('smallcostocks')"  class="btn btn-primary btn-lg btn-white">Small Co. Stocks : {{plansInfo.smallcostocks}}%</a>
+                <a ng-click="updateDesc('emergingmarkets')"  class="btn btn-primary btn-lg btn-white">Emerging Markets : {{plansInfo.emergingmarkets}}%</a>
+            </div>
+            <div class="row">
+                <a ng-click="updateDesc('realestate')"  class="btn btn-primary btn-lg btn-white">Real Estate : {{plansInfo.realestate}}%</a>
+                <a ng-click="updateDesc('corporatebonds')"  class="btn btn-primary btn-lg btn-white">Corporate Bonds : {{plansInfo.corporatebonds}}%</a>
+                <a ng-click="updateDesc('govermentbonds')"  class="btn btn-primary btn-lg btn-white">Goverment Bonds : {{plansInfo.govermentbonds}}%</a>
+            </div>
+            <div class="row">
+                <div zingchart id="chart-1" zc-json="pie" zc-width="100%" zc-height="100%"></div>
+            </div>
+            <div class="row">
+                <h4>{{desc}}</h4><br/><br/>
+            </div>
+
+       </div>
+	</snap-content>
+</div>
