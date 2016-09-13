@@ -15,7 +15,7 @@
 
             <div class="container">
                 <h1>Portfolios</h1>
-                Ikran recommends the below portfolios based on your age and income <br/><br/>
+                Ikran recommends the below portfolios based on your age and income. Click on each of the porfolios and scroll down to check the per dollar breakdown. <br/><br/>
             <div class="row">
                 <div class="row-fluid">
                     <a ng-click="updateGraph('conservative')" class="btn btn-primary btn-lg btn-white">Conservative</a>
@@ -35,6 +35,9 @@
                 <!--- Any Chart API Goes here --><br>
                 <zingchart id="myChart" zc-json="myJson" zc-width="640px" zc-height="480px"></zingchart>
             </div>
+            <div class="row">
+                <br/>Check out the per dollar breakdown for this portfolio <br/><br/>
+            </brdiv>
             <div class="row">
                 <a ng-click="updateDesc('largestocks')" class="btn btn-primary btn-lg btn-white">Large Stocks : {{plansInfo.largestocks}}%</a>
                 <a ng-click="updateDesc('smallcostocks')"  class="btn btn-primary btn-lg btn-white">Small Co. Stocks : {{plansInfo.smallcostocks}}%</a>
